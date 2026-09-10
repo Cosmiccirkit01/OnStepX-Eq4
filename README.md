@@ -14,6 +14,7 @@ This project documents converting a stock **EQ4 equatorial mount** into a GoTo m
 
 ## Table of Contents
 
+- [Hardware Files](#hardware-files)
 - [Bill of Materials](#bill-of-materials)
 - [Step 1: Flashing OnStepX Firmware to the ESP32](#step-1-flashing-onstepx-firmware-to-the-esp32)
 - [Step 2: Connecting the ESP32 to the OnStep Controller App](#step-2-connecting-the-esp32-to-the-onstep-controller-app)
@@ -25,7 +26,17 @@ This project documents converting a stock **EQ4 equatorial mount** into a GoTo m
 - [Step 8: Servicing the Mount and Fitting Motor Brackets](#step-8-servicing-the-mount-and-fitting-motor-brackets)
 - [Safety Notes](#safety-notes)
 - [Credits](#credits)
+- [Additional Photos & Videos](#additional-photos--videos)
 - [Status / Next Steps](#status--next-steps)
+
+## Hardware Files
+
+The custom PCB design referenced in [Step 5](#step-5-designing-a-custom-pcb) is included in this repo:
+
+- **[KiCad source files](hardware/kicad-source)** — schematic and PCB layout, editable in [KiCad](https://www.kicad.org/download/).
+- **[Gerber files](hardware/gerbers)** — fabrication-ready files, upload directly to a PCB manufacturer (e.g. JLCPCB, PCBWay).
+
+> These files are shared for reference and reuse. There's no warranty on the design — double-check footprints and ratings against your own components before fabricating.
 
 ## Bill of Materials
 
@@ -407,13 +418,19 @@ The same process was repeated for the RA axis.
 - [**Phobos Astronomy**](https://phobos-astronomy.netlify.app/) — EXOS2 bracket reference photo
 - [OnStep community wiki](https://onstep.groups.io/g/main/wiki/3860) — general OnStep documentation
 
+## Additional Photos & Videos
+
+More photos and testing videos (breadboard testing, PCB assembly, and mount tracking tests) are available here:
+
+📁 **[Google Drive — Photos & Videos](PASTE_YOUR_DRIVE_LINK_HERE)**
+
+> Make sure the Drive folder's sharing setting is **"Anyone with the link → Viewer"**, otherwise visitors following the link from GitHub will hit an access-denied page.
+
 ## Status / Next Steps
 
 Both axes are wired, mechanically mounted, and configured. Remaining work / not yet documented here:
 - End-to-end GoTo accuracy testing (polar alignment + star-based accuracy check).
 - Final photos and video of the fully assembled mount in operation.
-
-*(Additional photos and videos will be added to this repository / linked separately as the build is finalized.)*
 
 ---
 
