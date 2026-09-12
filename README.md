@@ -422,9 +422,8 @@ The same process was repeated for the RA axis.
 
 More photos and testing videos (breadboard testing, PCB assembly, and mount tracking tests) are available here:
 
-📁 **[Google Drive — Photos & Videos](PASTE_YOUR_DRIVE_LINK_HERE)**
+📁 **[Google Drive — Photos & Videos](https://tinyurl.com/42mazz7c)
 
-> Make sure the Drive folder's sharing setting is **"Anyone with the link → Viewer"**, otherwise visitors following the link from GitHub will hit an access-denied page.
 
 ## Status / Next Steps
 
