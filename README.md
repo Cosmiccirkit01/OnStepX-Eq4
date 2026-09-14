@@ -27,6 +27,7 @@ This project documents converting a stock **EQ4 equatorial mount** into a GoTo m
 - [Credits](#credits)
 - [Additional Photos & Videos](#additional-photos--videos)
 - [Status / Next Steps](#status--next-steps)
+- [Note](#Note)
 
 
 ## Bill of Materials
