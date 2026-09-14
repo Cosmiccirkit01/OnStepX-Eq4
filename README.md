@@ -424,7 +424,7 @@ Both axes are wired, mechanically mounted, and configured. Remaining work / not 
 
 ---
 
-**Hardware used in this build:** EQ4 mount · ESP32 · DRV8825 · NEMA17 steppers · Custom KiCad PCB · OnStepX 10.28
+**Hardware used in this build:** EQ4 mount · ESP32 · DRV8825 · NEMA17 steppers · Custom KiCad PCB · OnStepX 10.24
 
 ## Note
 
