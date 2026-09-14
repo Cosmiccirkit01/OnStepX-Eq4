@@ -14,7 +14,6 @@ This project documents converting a stock **EQ4 equatorial mount** into a GoTo m
 
 ## Table of Contents
 
-- [Hardware Files](#hardware-files)
 - [Bill of Materials](#bill-of-materials)
 - [Step 1: Flashing OnStepX Firmware to the ESP32](#step-1-flashing-onstepx-firmware-to-the-esp32)
 - [Step 2: Connecting the ESP32 to the OnStep Controller App](#step-2-connecting-the-esp32-to-the-onstep-controller-app)
@@ -29,14 +28,6 @@ This project documents converting a stock **EQ4 equatorial mount** into a GoTo m
 - [Additional Photos & Videos](#additional-photos--videos)
 - [Status / Next Steps](#status--next-steps)
 
-## Hardware Files
-
-The custom PCB design referenced in [Step 5](#step-5-designing-a-custom-pcb) is included in this repo:
-
-- **[KiCad source files](hardware/kicad-source)** — schematic and PCB layout, editable in [KiCad](https://www.kicad.org/download/).
-- **[Gerber files](hardware/gerbers)** — fabrication-ready files, upload directly to a PCB manufacturer (e.g. JLCPCB, PCBWay).
-
-> These files are shared for reference and reuse. There's no warranty on the design — double-check footprints and ratings against your own components before fabricating.
 
 ## Bill of Materials
 
@@ -61,7 +52,7 @@ The custom PCB design referenced in [Step 5](#step-5-designing-a-custom-pcb) is 
 
 ## Step 1: Flashing OnStepX Firmware to the ESP32
 
-1. Download the OnStepX firmware from the [official GitHub repository](https://github.com/hjd1964/OnStepX) — use the **`main`** branch for the latest configuration. Current version used in this build: **10.28**.
+1. Download the OnStepX firmware from the [official GitHub repository](https://github.com/hjd1964/OnStepX) — use the **`main`** branch for the latest configuration. Latest version for this build: **10.28**.
 
    ![OnStepX GitHub repository](images/01-onstepx-github-repo.png)
    *Credits: [hjd1964](https://github.com/hjd1964)*
@@ -220,7 +211,7 @@ Datasheets: [DRV8825](https://robu-prod-media.s3.ap-south-1.amazonaws.com/upload
 
    ![Breadboard circuit with both axes wired](images/20-breadboard-both-axes.jpeg)
 
-   > If motors behave erratically, check that the capacitor is installed and that the power supply is adequate — this build required stepping up from 12V/2A to 12V/5A to resolve power-related issues before finally tracing a remaining fault back to the wiring itself.
+   > If motors behave erratically, check that the capacitor is installed and that the power supply is adequate. And if problems still persist there may be a fault with wiring itself. 
 
 ## Step 5: Designing a Custom PCB
 
@@ -228,7 +219,7 @@ The first PCB used for this build had an internal short at the 12V input hole, w
 
 ![Initial PCB with internal short](images/21-initial-pcb-shorted.jpeg)
 
-**What is a short?** A short circuit is an unintended low-resistance connection between two points that shouldn't be connected (e.g., +12V and GND). This allows excessive current to flow, which can overheat and damage the circuit. A multimeter's continuity mode (which beeps when it detects a connection) is a fast way to check for shorts before powering anything on.
+**What is a short?** A short circuit is an unintended low-resistance connection between two points (+12V and GND). This allows excessive current to flow, which can overheat and damage the circuit. A multimeter's continuity mode (which beeps when it detects a connection) is a fast way to check for shorts before powering anything on.
 
 Since the original board was unrepairable, a **custom PCB** was designed from scratch in [KiCad](https://www.kicad.org/download/).
 
@@ -361,7 +352,7 @@ Opening the **Network** tab prompts for a password — again, it's **`password`*
 
 ## Step 8: Servicing the Mount and Fitting Motor Brackets
 
-This build is based on a stock **Skywatcher EQ4** mount.
+This build is based on a stock **EQ4** mount.
 
 Before adding any electronics, the mount was fully disassembled and inspected:
 
@@ -373,14 +364,14 @@ Before adding any electronics, the mount was fully disassembled and inspected:
 
 ### Fitting motor brackets
 
-Some mounts — like the **Explore Scientific EXOS2** with a factory OnStep kit — have screw holes purpose-built for motor brackets:
+Some mounts — like the **Explore Scientific EXOS2** with a OnStep kit — have screw holes purpose-built for motor brackets:
 
 ![EXOS2 mount with factory bracket mounting](images/37-exos2-mount-bracket-example.jpeg)
 *Credits: [Phobos Astronomy](https://phobos-astronomy.netlify.app/)*
 
 The EQ4 used in this build has **no such mounting points**, so brackets couldn't be bolted on directly. The workaround:
 
-1. A **solid steel angle** bracket was custom-made at a local weld shop, sized to bear the motor's weight.
+1. A **solid steel angle** was custom-made at a local weld shop, sized to bear the motor's weight.
 2. The angle was ground to fit the Dec axis, then drilled to match the screw pattern (washers recommended if hole alignment isn't perfect).
 3. The modified steel angle was welded to the motor bracket. This was repeated for **both the RA and Dec axes**.
 
@@ -434,3 +425,7 @@ Both axes are wired, mechanically mounted, and configured. Remaining work / not 
 ---
 
 **Hardware used in this build:** EQ4 mount · ESP32 · DRV8825 · NEMA17 steppers · Custom KiCad PCB · OnStepX 10.28
+
+## Note
+
+This project uses v10.24 of OnStepX. All the changes mentioned above are present in files provided.
